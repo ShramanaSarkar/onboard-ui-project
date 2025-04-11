@@ -1,0 +1,118 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+.header {
+    background-color: #1976d2; /* Primary blue from Material UI */
+    color: white;
+    padding: 5px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+.shopnix-icon {
+    width: 50px;
+}
+.container {
+    padding: 20px;
+    flex-grow: 1; /* Allows container to take up remaining vertical space */
+}
+.theme-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+.theme-image-container {
+    height: 150px;
+    background-color: #eee; /* Placeholder for image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+.theme-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+.theme-content {
+    padding: 15px;
+    text-align: center;
+}
+.theme-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.apply-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.apply-button {
+    background-color: white;
+    color: #1976d2;
+    border: 1px solid #1976d2;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.apply-button:hover {
+    background-color: #d1d1d1;
+    text-decoration: none;
+}
+.apply-button.checked {
+    background-color: #4caf50;
+    color: white;
+    border: 1px solid #4caf50;
+}
+.bottom-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dashboard-button {
+    background-color: white;
+    color: #1976d2;
+    border: 1px solid #1976d2;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.dashboard-button:hover {
+    background-color: #d1d1d1;
+    text-decoration: none;
+}
+.next-button {
+    background-color: #1976d2; /* Primary blue */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.next-button:hover {
+    background-color: #1565c0; /* Darker shade of blue */
+}
+.footer {
+    background-color: #1976d2; /* Same as header */
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 0.8rem;
+}

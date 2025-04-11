@@ -1,0 +1,107 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+.header {
+    background-color: #1976d2; /* Primary blue from Material UI */
+    color: white;
+    padding: 5px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+.shopnix-icon {
+    width: 50px;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+.product-list {
+    list-style: none;
+    padding: 0;
+}
+.product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+.product-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+.product-details {
+    flex-grow: 1;
+}
+.product-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+.product-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+.product-info {
+    font-size: 0.85rem;
+    color: #777;
+}
+.no-products {
+    text-align: center;
+    color: #777;
+}
+.product-item {
+    cursor: pointer;
+}
+.footer {
+    background-color: #1976d2; /* Same as header */
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+}
+ .btn-secondary {
+    background-color: #e0e0e0;
+    color: #333;
+}
+.btn-secondary:hover {
+    background-color: #d1d1d1;
+}
+.select-theme {
+    background-color: white;
+    color: #1976d2;
+    border: 1px solid #1976d2;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.select-theme:hover {
+    background-color: #d1d1d1;
+    text-decoration: none;
+}

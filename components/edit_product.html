@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" type="text/css" href="./../css/edit_product.css"  />
+</head>
+<body>
+<div class="header">
+    <img src="../assets/icon.png" alt="Shopnix Icon" class="shopnix-icon">
+</div>
+<div class="container">
+    <div class="form-column">
+        <h2>Edit Product</h2>
+        <h3>Basic Details</h3>
+        <div class="form-group">
+            <label for="productName">Product name</label>
+            <input type="text" class="form-control" id="productName" placeholder="eg - anatomy book">
+        </div>
+        <div class="form-group">
+            <label for="productDescription">Product Description</label>
+            <textarea class="form-control" id="productDescription" rows="3" placeholder="Input text"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="productImage">Add/Edit Image(s)</label>
+            <input type="file" class="form-control-file" id="productImage" accept="image/*">
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="hasSku">
+            <label for="hasSku">this product has an SKU code</label>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="skuCode" placeholder="eg - PROD0001">
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="hasHsnSac">
+            <label for="hasHsnSac">this product has an HSN/SAC code</label>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="hsnSacCode" placeholder="eg - 123456">
+        </div>
+
+        <hr>
+
+        <h3>Pricing Details</h3>
+        <div class="checkbox-group">
+            <input type="checkbox" id="priceInclusiveGst">
+            <label for="priceInclusiveGst">price inclusive of GST</label>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-6">
+                <label for="netPrice">Net price</label>
+                <input type="number" class="form-control" id="netPrice" placeholder="eg - 80">
+            </div>
+            <div class="col-md-6">
+                <label for="listPrice">List price</label>
+                <input type="number" class="form-control" id="listPrice" placeholder="eg - 100">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-6">
+                <label for="discountPercentage">Discount percentage</label>
+                <input type="number" class="form-control" id="discountPercentage" placeholder="eg - 40">
+            </div>
+            <div class="col-md-6">
+                <label for="gstRate">GST rate</label>
+                <input type="number" class="form-control" id="gstRate" placeholder="eg - 20">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-6">
+                <label for="shippingCharges">Shipping charges (if any)</label>
+                <input type="number" class="form-control" id="shippingCharges" placeholder="eg - 40">
+            </div>
+            <div class="col-md-6">
+                <label for="stockLevel">Stock level</label>
+                <input type="number" class="form-control" id="stockLevel" placeholder="eg - 110">
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="btn btn-secondary" onclick="window.history.back()">Cancel</button>
+            <button class="btn btn-primary" id="saveProduct">Save Changes</button>
+        </div>
+    </div>
+    <div class="preview-column">
+        <div class="image-preview-placeholder" style="display: none;">
+            <i class="material-icons">image</i>
+        </div>
+        <img id="uploadedImage" src="#" alt="Image Preview" class="image-preview">
+        <h3 id="previewProductName" class="preview-title"></h3>
+        <p id="previewDescription" class="preview-description"></p>
+    </div>
+</div>
+<div class="footer">
+    Copyright © Cloudnix Software Labs 2025. All Rights Reserved.
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type='text/javascript' src='./../js/edit_product.js'></script>
+</body>
+</html>
