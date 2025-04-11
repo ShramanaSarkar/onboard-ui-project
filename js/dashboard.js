@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const info = document.createElement('p');
             info.classList.add('product-info');
-            info.textContent = `Type: ${product.type || 'N/A'} | Category: ${product.category || 'N/A'} | Sub-category: ${product.subCategory || 'N/A'}`;
+            info.textContent = `Type: ${product.type || 'N/A'} | Theme: ${product.productTheme || 'N/A'} | Category: ${product.category || 'N/A'} | Sub-category: ${product.subCategory || 'N/A'}`;
 
             details.appendChild(name);
             details.appendChild(description);

@@ -67,7 +67,8 @@ $(document).ready(function () {
     const type = localStorage.getItem("productType"); // Retrieve from localStorage
     const category = localStorage.getItem("category"); // Retrieve from localStorage
     const subCategory = localStorage.getItem("subCategory"); // Retrieve from localStorage
-
+    const productTheme = localStorage.getItem("selectedTheme"); // Retrieve from localStorage
+    
     if (productName) {
       const newProduct = {
         name: productName,
@@ -76,6 +77,7 @@ $(document).ready(function () {
         type: type,
         category: category,
         subCategory: subCategory,
+        productTheme: productTheme,
         skuCode: $("#hasSku").prop("checked") ? $("#skuCode").val() : "",
         hsnSacCode: $("#hasHsnSac").prop("checked")
           ? $("#hsnSacCode").val()
