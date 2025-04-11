@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply a theme</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://unpkg.com/@mui/material@latest/umd/material-ui.development.css" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .header {
+            background-color: #1976d2; /* Primary blue from Material UI */
+            color: white;
+            padding: 5px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .header h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .shopnix-icon {
+            width: 50px;
+        }
+        .container {
+            padding: 20px;
+            flex-grow: 1; /* Allows container to take up remaining vertical space */
+        }
+        .theme-card {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .theme-image-container {
+            height: 150px;
+            background-color: #eee; /* Placeholder for image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-bottom: 1px solid #ddd;
+        }
+        .theme-image {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .theme-content {
+            padding: 15px;
+            text-align: center;
+        }
+        .theme-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .apply-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .apply-button {
+            background-color: white;
+            color: #1976d2;
+            border: 1px solid #1976d2;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+        .apply-button:hover {
+            background-color: #d1d1d1;
+            text-decoration: none;
+        }
+        .apply-button.checked {
+            background-color: #4caf50;
+            color: white;
+            border: 1px solid #4caf50;
+        }
+        .bottom-actions {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .dashboard-button {
+            background-color: white;
+            color: #1976d2;
+            border: 1px solid #1976d2;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+        .dashboard-button:hover {
+            background-color: #d1d1d1;
+            text-decoration: none;
+        }
+        .next-button {
+            background-color: #1976d2; /* Primary blue */
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .next-button:hover {
+            background-color: #1565c0; /* Darker shade of blue */
+        }
+        .footer {
+            background-color: #1976d2; /* Same as header */
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="./assets/icon.png" alt="Shopnix Icon" class="shopnix-icon">
+</div>
+<div class="container">
+    <h2 class="mb-4">Apply a theme</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="theme-card">
+                <div class="theme-image-container">
+                    <img src="./assets/bags.png" alt="Bags Theme" class="theme-image">
+                </div>
+                <div class="theme-content">
+                    <h3 class="theme-title">Bags Theme <span style="color: #9e9e9e;">(recommended)</span></h3>
+                    <div class="apply-button-container">
+                        <button class="apply-button" data-theme="bags">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="theme-card">
+                <div class="theme-image-container">
+                    <img src="./assets/flex.png" alt="Flex Theme" class="theme-image">
+                </div>
+                <div class="theme-content">
+                    <h3 class="theme-title">Flex Theme</h3>
+                    <div class="apply-button-container">
+                        <button class="apply-button" data-theme="flex">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="theme-card">
+                <div class="theme-image-container">
+                    <img src="./assets/chic.png" alt="Chic Theme" class="theme-image">
+                </div>
+                <div class="theme-content">
+                    <h3 class="theme-title">Chic Theme</h3>
+                    <div class="apply-button-container">
+                        <button class="apply-button" data-theme="chic">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-actions">
+        <a href="dashboard.html" class="dashboard-button">Go to Dashboard</a>
+        <button id="addNextButton" class="btn btn-primary">Add Next</button>
+    </div>
+</div>
+<div class="footer">
+    Copyright © Cloudnix Software Labs 2025. All Rights Reserved.
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $('.apply-button').on('click', function() {
+        const selectedTheme = $(this).data('theme');
+        localStorage.setItem('selectedTheme', selectedTheme + ' Theme'); // Save theme to localStorage
+
+        $('.apply-button').not(this).removeClass('checked').text('Apply');
+        $(this).toggleClass('checked');
+        if ($(this).hasClass('checked')) {
+            $(this).text('Checked');
+        } else {
+            $(this).text('Apply');
+        }
+    });
+
+    $('#addNextButton').on('click', function() {
+        window.location.href = 'product_type.html';
+    });
+
+    // Apply saved theme on page load
+    const savedTheme = localStorage.getItem('selectedTheme');
+    if (savedTheme) {
+        $('.apply-button').each(function() {
+            const themeName = $(this).data('theme') + ' Theme';
+            if (themeName === savedTheme) {
+                $(this).addClass('checked').text('Checked');
+            } else {
+                $(this).removeClass('checked').text('Apply');
+            }
+        });
+        console.log(`Applied theme on load: ${savedTheme}`);
+        // You would also apply the visual theme here by adding CSS classes to the body or other elements
+        document.body.setAttribute('data-theme', savedTheme.replace(' ', '-').toLowerCase()); // Example
+    }
+
+
+});
+</script>
+<script src="https://unpkg.com/@mui/material@latest/umd/material-ui.development.js"></script>
+</body>
+</html>
